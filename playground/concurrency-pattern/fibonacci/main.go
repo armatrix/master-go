@@ -5,8 +5,8 @@ import "fmt"
 func fibonacci(c, quit chan int) { // This function takes in two int channels, 'c' and 'quit'
 	x, y := 0, 1 // defines x and y
 	for {        // run until something stops it
-		select { //
-		case c <- x: //
+		select {
+		case c <- x:
 			x, y = y, x+y // fibonacci calculation
 		case <-quit: // if the function recieves anything from the 'quit' channel:
 			fmt.Println("quit") // print "quit"
