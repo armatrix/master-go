@@ -1,0 +1,68 @@
+{
+  "go.formatTool": "goimports",
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "go.autocompleteUnimportedPackages": true,
+  "go.inferGopath": true,
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 1,
+  "emmet.extensionsPath": "",
+  "editor.fontSize": 16,
+  "go.languageServerExperimentalFeatures": {
+    "documentLink": false
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "editor.defaultFormatter": "golang.go",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "explorer.confirmDragAndDrop": false,
+  "html.format.endWithNewline": true,
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "editor.snippetSuggestions": "top",
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.formatOnPaste": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "go.docsTool": "guru",
+  "git.confirmSync": false,
+  "[go]": {},
+  "gitlens.advanced.blame.customArguments": [],
+  "window.zoomLevel": 0,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": true,
+  "vetur.format.defaultFormatter.ts": "prettier-tslint",
+  "vue-format.attr_end_with_gt": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.documentSelectors": [".vue", ".css", ".js"],
+  "vue-format.format_need": [
+    "css",
+    "html",
+    "js",
+    "css",
+    "vue"
+  ],
+  "workbench.colorTheme": "Monokai",
+  "dart.flutterDaemonLogFile": null,
+  "dart.openDevTools": "flutter",
+  "gitlens.views.repositories.files.layout": "tree",
+  "go.useLanguageServer": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.delveConfig": {
+    "todo":""
+  }
+}

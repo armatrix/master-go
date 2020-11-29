@@ -1,0 +1,96 @@
+  
+{
+	"log error":{
+		"prefix": "erl",
+		"body":[
+			"if err != nil {",
+			"    log.Errorf(\"failed to $1: %v.\", err)",
+			"}",
+			"$2"
+		]
+	},
+	"return error":{
+		"prefix": "err",
+		"body":[
+			"if err != nil {",
+			"    return nil, err",
+			"}",
+			"$2"
+		]
+	},
+	"fori":{
+		"prefix": "fori",
+		"body": [
+			"for i := 0; i < $1; i++ {",
+			"    $2",
+		    "}"
+		]
+	},
+	"struct":{
+		"prefix": "strt",
+		"body": [
+			"// $1 $2", 
+			"type $1 struct{",
+			"    $3",
+			"}"
+		]
+	},
+	"main":{
+		"prefix": "main",
+		"body": [
+			"func main()  {",
+			"    $1",
+			"}"
+		]
+	},
+	"gorm err":{
+		"prefix": "dberr",
+		"body": [
+			"if err != nil {",
+			"    if err == gorm.ErrRecordNotFound {",
+			"    return nil, model.NewError(err, model.ERROR_DB_NO_ROWS)",
+			"  }",
+			"return nil, model.NewError(err, model.ERROR_DB)",
+			"}"
+		]
+	},
+	"bind param":{
+		"prefix": "bind",
+		"body": [
+			"if err := c.ShouldBindJSON(&request); err != nil {",
+		  	"    RespParamsErr(c, err)" ,
+			"    return",
+			"}",
+			"$1"
+		]
+	},
+	"bind uri":{
+		"prefix": "buri",
+		"body": [
+			"if err := c.ShouldBindUri(&request); err != nil {",
+		    "    RespParamsErr(c, err)",
+		    "    return",
+			"}",
+			"$1"
+		]
+	},
+	"data return":{
+		"prefix": "data",
+		"body": [
+			"if err != nil {",
+		    "    RespErr(c, err)",
+		    "    return",
+	        "}",
+
+	        "RespOk(c, data)"
+		]
+	},
+	"package main":{
+		"prefix": "pm",
+		"body": [
+			"package main",
+
+			"$1"
+		]
+	}
+}
